@@ -1,0 +1,64 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* Selectores Globales */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto; /* Otre forma de centrar es: margin-inline: auto; */
+
+}
+
+img {
+    max-width: 100%; /* Todas las imagenes se adaptan el 100% del tamaño de su elemento contenedor */
+}
+
+/* Header y navegación */
+.nombre-sitio {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+
+.contenedor-navegacion {
+    border-top: 1px solid #e1e1e1;
+}
+
+.nav-principal {
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;/* Para que la imagen no se repita */
+    background-size: cover; /* Para que la imagen se estire y ocupe todo el ancho disponoble de la pantalla */
+    height: 550px;
+}
+
+/* Categorias */
+
+.listado-categorias {
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Separación */
+}
