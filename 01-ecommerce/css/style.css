@@ -1,33 +1,52 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap');
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
+    font-size: 62.5%;/* Con esto convertimos 1rem a 10px, osea, 1rem = 10px */
   }
 
   *, *:before, *:after {
     box-sizing: inherit;
   }
 
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2; /* Para el Interlineado, osea la separación (arriba - abajo) entre lineas de texto en un párrafo  */
+}
+
 /* Selectores Globales */
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
 a {
     text-decoration: none;
     color: #000;
 }
 
 .contenedor {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto; /* Otre forma de centrar es: margin-inline: auto; */
 
 }
 
 img {
-    max-width: 100%; /* Todas las imagenes se adaptan el 100% del tamaño de su elemento contenedor */
+    max-width: 100%; /* Todas las imágenes se adaptan el 100% del tamaño de su elemento contenedor */
+    display: block; /* Para Eliminar espacio entre la imagen y el siguiente elemento que se encuentre debajo */
 }
 
 /* Header y navegación */
 .nombre-sitio {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     text-align: center;
+    font-size: 4rem;
 }
 
 .nombre-sitio span {
@@ -39,10 +58,10 @@ img {
 }
 
 .nav-principal {
-    padding: 20px 0;
+    padding: 2rem 0;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -50,15 +69,34 @@ img {
     background-image: url(../img/principal.jpg);
     background-repeat: no-repeat;/* Para que la imagen no se repita */
     background-size: cover; /* Para que la imagen se estire y ocupe todo el ancho disponoble de la pantalla */
-    height: 550px;
+    height: 55rem;
 }
 
 /* Categorias */
+
+.categorias h2 {
+    text-align: center;
+}
+
+.categoria a {
+    text-align: center;
+    display: block; /* Cambia el elemento "a" de inline a block para luego poderlo centrar con text-align: center; */
+
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #ffffff;
+    border-bottom-right-radius: 1rem;
+    font-weight: bold;
+}
 
 .listado-categorias {
     height: 300px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Separación */
+    gap: 2rem; /* Separación */
 }
