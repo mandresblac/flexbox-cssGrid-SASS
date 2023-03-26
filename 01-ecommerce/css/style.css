@@ -153,7 +153,7 @@ img {
     margin: 0;
 }
 
-/* --------------- NUESTROS PRODUCTOS--------------- */
+/* --------------- NUESTROS PRODUCTOS --------------- */
 
 .contenido-principal {
     padding-top: 1rem;
@@ -237,5 +237,35 @@ img {
     font-weight: 900;
 }
 
+/* --------------- FOOTER --------------- */
 
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
 
+.grid-footer {
+    /* Utilizando flexbox */
+    /* display: flex; */
+
+    /* Utilizando grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+.grid-footer h3 {
+    margin: 0 0 1rem;
+}
+
+.footer-menu a {
+    display: block;/* Convertimos los enlaces de elementos inline a elementos block */
+}
+
+.copyright {
+    margin: 4rem 0 2.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
