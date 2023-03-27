@@ -67,10 +67,12 @@ img {
     margin: 1rem;
     transition: background-color .3s ease-out;
     text-align: center;
+    border: none;
 }
 
 .btn:hover {
     background-color: #769c02;
+    cursor: pointer;
 }
 
 /* --------------- UTILIDADES --------------- */
@@ -335,8 +337,10 @@ img {
 }
 
 .sidebar {
+    padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -346,5 +350,74 @@ img {
 }
 
 .sidebar ul {
-    padding: 2rem;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+/* ------------------ GALERÍA ------------------ */
+
+.galeria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.galeria img {
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+/* ------------------ CONTACTO - FORMULARIO ------------------ */
+
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset {
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.formulario legend {
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]), 
+.campo textarea,
+.campo select {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+.formulario .btn {
+    padding: 1.5rem;
+    margin: 0 auto;
 }
