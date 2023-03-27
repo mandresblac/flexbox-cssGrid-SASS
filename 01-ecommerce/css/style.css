@@ -66,11 +66,20 @@ img {
     font-weight: 900;
     margin: 1rem;
     transition: background-color .3s ease-out;
+    text-align: center;
 }
 
 .btn:hover {
     background-color: #769c02;
 }
+
+/* --------------- UTILIDADES --------------- */
+
+.max-width-30 {
+    max-width: 30rem;
+    margin: 0;
+}
+
 
 /* --------------- HEADER Y NAVEGACIÓN --------------- */
 .nombre-sitio {
@@ -151,6 +160,7 @@ img {
 
 .texto-nosotros h2 {
     margin: 0;
+    text-align: left;
 }
 
 /* --------------- NUESTROS PRODUCTOS --------------- */
@@ -283,4 +293,58 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* ------------------ BLOG ------------------ */
+
+.contenedor-blog {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrada h2 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* Para borrar el borde inferior de la ultima entrada */
+.entrada:last-of-type {
+    border: none;
+}
+
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p {
+    font-weight: bold;
+}
+
+.entrada-meta span {
+    color: #037bc0;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul {
+    padding: 2rem;
 }
