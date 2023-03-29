@@ -1,0 +1,158 @@
+:root {
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+}
+html {
+    font-size: 62.5%; /** 1REM = 10pX **/
+}
+
+body {
+    background-color: var(--azul);
+    font-family:  'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+.caja-curso h1 {
+    margin: 0;
+}
+.caja-curso p {
+    font-size: 2.4rem;
+}
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+
+h1, h2 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.box {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+/* ---------------- 1.- Display Grid ---------------- */
+
+/* display:grid permite hebilitar todas las propiedades de grid css */
+
+/* NOTA: Grid solo afecta  unicamente al primer nivel de hijos en el HTML, nunca al segundo, tercerto, cuarto, etc. */
+
+.grid-1 {
+    display: grid;
+
+}
+
+
+/* ---------------- 2.- Grid Template Columns ---------------- */
+
+/* grid-template-columns permite crear columnas, y van de izquierda a derecha.
+Se pueden utilizar pixeles, rems para definir las columnas
+*/
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;/* Cada valor representa el ancho que tiene cada columna, en este caso son 3 columnas de 300px cada una */
+    grid-template-columns: repeat(3, 300px); /* La funcion repeat() toma 2 valores, el primero cuantas veces se repite un valor, y el segundo el tamaño de ese valor */
+}
+
+/* grid-column-start y grid-column-end se usan para cambiar el posicionamiento que toman por defecto los elementos de las columnas */
+.grid-2 .box:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    /* El shorthand de grid-column-start y grid-column-end es grid-column */
+    grid-column: 1 / 2;/* Primer valor grid-column-start, segundo valor grid-column-end */
+}
+
+
+/* ---------------- 3.- Grid Template Rows ---------------- */
+
+/* grid-template-rows permite crear filas, y van de arriba hacia abajo.
+Se pueden utilizar pixeles, rems para definir las columnas
+*/
+
+.grid-3 {
+    display: grid;
+    grid-template-rows: repeat(2, 300px); /* La funcion repeat() toma 2 valores, el primero cuantas veces se repite un valor, y el segundo el tamaño de ese valor */
+    grid-template-columns: repeat(3, 300px);
+}
+
+/* grid-row-start y grid-row-end se usan para cambiar el posicionamiento que toman por defecto los elementos de las filas */
+.grid-3 .box:nth-child(2) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    /* El shorthand de grid-row-start y grid-row-end es grid-row */
+    grid-row: 1 / 2;/* Primer valor grid-row-start, segundo valor grid-row-end */
+}
+
+
+/* ---------------- 4.- Span ---------------- */
+
+/* Otra manera de posicionar los elementos es diciendole que ocupe varios espacios dependiendo de la posicion donde se encuentre, para eso utilizamos la palabra "span" que traducida significa como "abarcar columnas" */
+
+.grid-4 {
+    display: grid;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(3, 300px);
+}
+
+.grid-4 .box:nth-child(2) {
+    background-color: cornflowerblue;
+    /* grid-column: 3 / 4; */
+    /* grid-row: 2 / 3; */
+
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+
+
+/* ---------------- 5.- Grid Shorthand ---------------- */
+
+/* El shorhand o tajo para grid-template-rows y grid-template-columns es grid */
+
+.grid-5 {
+    display: grid;
+    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(3, 300px);
+
+    grid: repeat(2, 300px) / repeat(3, 300px); /* Primer valor grid-template-rows, segundo valor grid-template-columns */
+}
+
+
+/* ---------------- 6.- Grid Autoflow ---------------- */
+
+.grid-6 {
+
+}
+
+
+
+

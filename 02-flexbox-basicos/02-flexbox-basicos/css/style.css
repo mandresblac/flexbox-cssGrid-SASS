@@ -71,7 +71,7 @@ h1, h2 {
 
 /* ---------------- 1.- Display Flex ---------------- */
 
-/* NOTA: Flexbox solo afecta  unicamnete al primer nivel de hijos en el HTML, nunca al segundo, tercerto, cuarto, etc. */
+/* NOTA: Flexbox solo afecta  unicamente al primer nivel de hijos en el HTML, nunca al segundo, tercerto, cuarto, etc. */
 
 .d-flex {
     display: flex; /* display: flex; Asigna automaticamente (por default) flex-direction: row; */
