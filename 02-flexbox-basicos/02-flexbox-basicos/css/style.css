@@ -1,0 +1,278 @@
+:root {
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+}
+html {
+    font-size: 62.5%; /** 1REM = 10pX **/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    background-color: var(--azul);
+    font-family:  'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 5rem 0;
+    padding: 1rem;
+}
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+.caja-curso h1 {
+    margin: 0;
+}
+.caja-curso p {
+    font-size: 2.4rem;
+}
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.box {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    border: 1rem solid #bb2b03;
+}
+
+.contenedor > div {
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+
+ /* --------------------- Propiedades flexbox del contenedor padre ------------------ */
+
+/* ---------------- 1.- Display Flex ---------------- */
+
+/* NOTA: Flexbox solo afecta  unicamnete al primer nivel de hijos en el HTML, nunca al segundo, tercerto, cuarto, etc. */
+
+.d-flex {
+    display: flex; /* display: flex; Asigna automaticamente (por default) flex-direction: row; */
+}
+
+/* ---------------- 2.- Flex Direction ---------------- */
+
+.d-flex-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ---------------- 3.- Justify Content (Dirección Row) ---------------- */
+
+/* Cuando flex-direction es row justify-content sirve para alinear horizontalmente, cuando el eje principal (main axis) es row */
+
+.d-flex-3 {
+    display: flex;
+    justify-content: flex-start; /* flex-start es el valor por default */
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+/* ---------------- 4.- Justify Content (Dirección Column) ---------------- */
+
+/* Cuando flex-direction es column justify-content sirve para alinear verticalmente, cuando el eje principal (main axis) es column */
+
+.d-flex-4 {
+    height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+/* ---------------- 5.- Align Items (Dirección Row) ---------------- */
+
+/* Cuando flex-direction es row align-items sirve para alinear verticalmente, cuando el eje principal (main axis) es row */
+.d-flex-5 {
+    height: 700px;
+    display: flex;
+
+    align-items: stretch; /* stretch es el valor por default y lo que hace es estirar el contenido a toda la altura que halla disponible */
+    align-items: flex-start;
+    align-items: center;
+    align-items: flex-end;
+    align-items: baseline; /* baseline alinea tomando como referencia la línea base del texto */
+}
+
+/* ---------------- 6.- Align Items (Dirección Columna) ---------------- */
+
+/* Cuando flex-direction es column align-items sirve para alinear horizontalmente, cuando el eje principal (main axis) es column */
+
+.d-flex-6 {
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch; /* stretch es el valor por default y lo que hace es estirar el contenido a toda la altura que halla disponible */
+    align-items: flex-start;
+    align-items: center;
+    align-items: flex-end;
+}
+
+/* ---------------- 7.- Align Items y JustifyContent ---------------- */
+
+/* Por default hay 3 valores que siempre inicializa flexbox automaticamente
+    1- flex-direction: row;
+    2- justify-content: start;
+    3- align-items: stretch;
+*/
+
+.d-flex-7 {
+    height: 800px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+
+/* --------------------- Propiedades flexbox del contenedor hijo ------------------ */
+
+/* ---------------- 8.- Flex Basis ---------------- */
+
+/* Flex-basis es una propiedad que se aplica unicamente a los hijos del contenedor padre */
+
+/*
+flex-basis: Es el tamaño del elemento hijo dentro de la línea de la caja flexbox, si la caja flexbox tiene dirección de fila (row), flex-basis representa el width, si la caja flexbox tiene dirección de columna (column), flex-basis representa el height; su valor por defecto es "auto"  */
+
+.d-flex-8 {
+    display: flex;
+}
+
+/* Llamamos al hijo de la clase d-flex-8 que es .box y en este podremos utilizar la propiedad flex-basis */
+.d-flex-8 .box {
+    flex-basis: 33.3%;
+    flex-basis: 200px;
+}
+
+/* ---------------- 9.- Gap y Calc ---------------- */
+
+/* Gap y Calc son propiedades que tambien se aplican unicamente a los hijos del contenedor padre */
+
+.d-flex-9 {
+    display: flex;
+    /* gap: 2rem; */ /* Para separar las columnas */
+    justify-content: space-between;
+}
+
+/* Llamamos al hijo de la clase d-flex-9 que es .box y en este podremos utilizar las propiedades gap y calc */
+.d-flex-9 .box:nth-child(1) {
+    flex-basis: calc( 50% - 1rem ); /* "calc" es como una funcion de calculadora en CSS que permite realizar calculos */
+}
+
+.d-flex-9 .box:nth-child(2),
+.d-flex-9 .box:nth-child(3) {
+    flex-basis: calc( 25% - 1rem );
+}
+
+/* ---------------- 10.- Flex Wrap ---------------- */
+
+/* La propiedad flex-wrap define si la caja flexbox envuelve o NO a sus hijos*/
+/* El valor nowrap de la propiedad flex-wrap alinea todos los elementos hijos en una sola línea, aunque los elemenos hijos rebasen el tamaño del contenedor van a seguir en una misma línea, solo se ajustan al tamaño del contenedor*/
+/* El valor wrap dice que si los tamaños sumados de los elementos hijos rebasan el tamaño del main axis del elemento contenedor, se ubicaran en otra linea*/
+/* El valor wrap-reverse desbordara a los elementos hijos pero lo mandara al final del cross axis o eje transversal*/
+/* nowrap (por defecto) | wrap | wrap-reverse */
+
+.d-flex-10 {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+}
+
+.d-flex-10 .box {
+    flex-basis: 33.3%;
+}
+
+/* ---------------- 11.- Flex Grow ---------------- */
+
+/* flex-grow: (Factor de crecimiento) Cuando la caja flexbox tenga espacio sobrante, es la habilidad de crecer; El valor por default es 0, NO se aceptan valores negativos */
+/* El factor de crecimiento no va a depender del total del ancho sino del espacio sobrante, es decir cuanto le corresponde a cada uno  */
+
+.d-flex-11 {
+    display: flex;
+}
+
+.d-flex-11 .box:nth-child(1) {
+    flex-grow: 4;
+}
+
+.d-flex-11 .box:nth-child(2) {
+    flex-grow: 1;
+}
+
+.d-flex-11 .box:nth-child(3) {
+    flex-grow: 1;
+}
+
+/* ---------------- 12.- Flex Shrink ---------------- */
+
+/* flex-shrink: (Factor de reducción, es lo contrario de flex-grow) Cuando la caja flexbox no tenga espacio sobrante, es la habilidad o el factor de encogerse; El valor por default es 1, NO se aceptan valores negativos */
+
+.d-flex-12 {
+    display: flex;
+}
+
+.d-flex-12 .box {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.d-flex-12 .box:nth-child(3) {
+    flex-shrink: 2;
+}
+
+/* ---------------- 13.- Flex Shorthand ---------------- */
+
+/* La propiedad "flex" es un shorthand o atajo para las propiedades flex grow, flex shrink y flex basis */
+.d-flex-13 {
+    display: flex;
+}
+
+.d-flex-13 .box {
+    flex-basis: 33.3%;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    flex: 1 0 33.3%;/* Primer parametro flex-grow, segundo parametro flex-shrink, tercer parametro flex-basis, no es necesario pasarle obligatoriamente los 3 parametros, puede ser uno solo */
+}
+
+
