@@ -1,0 +1,19 @@
+/* ---------------- 5.- Selector de ID ---------------- */
+
+/* La desventaja de usar IDs para dar estilos en Css es que no son reutilisables */
+/* OJO: Solamente debe haber un ID con un nombre por documento HTML, es decir, se puede tener todos los IDs que se desee pero que tengan un mismo nombre solo debe haber uno, es decir, no se puede colocar un mismo nombre a varios IDs en un documento HTML */
+
+#encabezado {
+  text-transform: uppercase;
+  color: red;
+}
+
+.texto {
+  color: blue;
+}
+
+#encabezado.texto {
+  color: green;
+}
+
+

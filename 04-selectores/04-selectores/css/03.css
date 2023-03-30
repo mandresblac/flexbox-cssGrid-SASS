@@ -1,0 +1,22 @@
+/* ---------------- 3.- Selector de 2 Clases ---------------- */
+
+.texto {
+  background-color: red;
+}
+
+.azul {
+  color: blue;
+}
+
+.mayusculas {
+  text-transform: uppercase;
+}
+
+/* Para seleccionar dos clases que tenga un mismo elemento HTML no se deja espacio entre ambas clases, es decir, se escriben pegadas o seguidas una detrás de la otra, así: */
+.texto.mayusculas {
+  font-size: 10rem;
+}
+
+.texto.azul {
+  text-align: right;
+}

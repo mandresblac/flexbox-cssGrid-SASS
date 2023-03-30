@@ -1,0 +1,17 @@
+/* ---------------- 4.- Selector de Clases Anidadas ---------------- */
+
+/* Dejando un espacio entre las clases seleccionamos un elemento hijo, en este caso .descripcion es hijo de .header que es el padre  */
+
+/* OJO: se recomienda máximo 3 niveles de anidación, lo ideal es 2 niveles */
+
+.header .descripcion {
+  color: red;
+}
+
+.descripcion {
+  color: blue;
+}
+
+
+
+
