@@ -1,0 +1,6 @@
+/* ---------------- 9.- Seleccionar el primer Elemento Despuésdel selector ---------------- */
+/* El signo + selecciona el siguiente nivel */
+
+.admin div + p {
+    background-color: red;
+}

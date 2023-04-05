@@ -1,0 +1,6 @@
+/* ---------------- 8.- Selector de primer Nivel de Hijos ---------------- */
+/*  Con el simbolo mayor que ">" se selecciona el primer nivel de hijos  */
+
+.admin > div {
+    border: 2px solid red;
+}

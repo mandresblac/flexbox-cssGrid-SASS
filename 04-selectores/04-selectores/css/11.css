@@ -1,0 +1,11 @@
+/* ---------------- 11.- Seleccionar el primer Hijo de una lista ---------------- */
+
+ul li:first-child {
+    border: 2px solid red;
+}
+
+
+ul li:first-of-type {
+    border: 2px solid orange;
+}
+

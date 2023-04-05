@@ -1,0 +1,22 @@
+/* ---------------- 13.- Selecciona un elemento en Especifico --------------- */
+
+ul li:nth-child(1),
+ul li:nth-child(3),
+ul li:nth-child(5) {
+    border: 2px solid red;
+}
+
+/*  2n + 1   es igual a   2 * 0 + 1 = 1  */
+ul li:nth-child(2n + 1) {
+    border: 2px solid red;
+}
+
+/* ood aplica a números impares */
+ul li:nth-child(odd) {
+    border: 2px solid red;
+}
+
+/* even aplica a números pares */
+ul li:nth-child(even) {
+    border: 2px solid red;
+}

@@ -1,3 +1,9 @@
 /* ---------------- 6.- Selector de Etiqueta y Clase ---------------- */
 
+div.texto {
+    background-color: yellow;
+}
 
+.texto {
+    background-color: red;
+}

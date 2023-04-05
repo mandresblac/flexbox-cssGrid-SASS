@@ -1,0 +1,16 @@
+/* ---------------- 10.- Selector de atributo ---------------- */
+/* El simbolo ^ le indica a css que le de estilos a todos los elemento que inicien con valor especifico, en este caso que inicien con http */
+/* EL simbolo pesos $ le indica a css que le de estilos a todos los elemento que terminen un valor especiico, en este caso que finalicen con .com  */
+
+a[href^=".com"] {
+    color: red;
+}
+
+
+a[href$=".com"] {
+    color: red;
+}
+
+input[type="tel"] {
+    border: 3px solid green;
+}
