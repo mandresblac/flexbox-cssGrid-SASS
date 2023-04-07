@@ -1,0 +1,15 @@
+/* --------- 15.- Seleccionar primer letra y primer linea de un parrafo ------ */
+
+/* ::first-letter selecciona la primer letra del parrafo */
+
+.primer-letra::first-letter {
+    font-size: 20rem;
+}
+
+/* ::first-line selecciona la primer linea del parrafo */
+.primer-linea::first-line {
+    font-size: 4rem;
+}
+
+
+

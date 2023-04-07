@@ -1,5 +1,19 @@
-/* ---------------- 14.- Seleccionar todos los elementos excepto uno o unos ------------- */
+/* --------- 14.- Seleccionar todos los elementos excepto uno o unos de esos elementos ------ */
+
+/* :noT() le dice a Css que seleccione todos los parrafos "p" menos el que tiene clase .texto, es decir que le aplica el color rojo a la letra de todos los parrafos "p" menos al parrafo con clase .texto */
+
+/* Excluye solo uno */
+/* p:not(.texto) {
+    color: red;
+} */
 
 
+/* Opcion 1 para excluir multiples elementos */
+p:not(.texto):not(.oferta) {
+    color: red;
+}
 
-
+/* Opcion 2 para excluir multiples elementos */
+p:not(.texto, .oferta) {
+    color: red;
+}
