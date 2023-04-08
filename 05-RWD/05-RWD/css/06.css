@@ -1,0 +1,27 @@
+/* ------------- Tamaños estándar para los media queries ------------- */
+
+/* Media querie para dispositivo movil (telefono) en horizontal */
+@media (min-width: 550px) {
+
+}
+
+/* Media querie para una tablet tamaño estandar */
+@media (min-width: 768px) {
+
+}
+
+/* Media querie para un landscape */
+@media (min-width: 1024px) {
+
+}
+
+/* Media querie para una laptop */
+@media (min-width: 1200px) {
+
+}
+
+/* Media querie para un monitor o pantalla de tamaño muy grande */
+@media (min-width: 1600px) {
+
+}
+

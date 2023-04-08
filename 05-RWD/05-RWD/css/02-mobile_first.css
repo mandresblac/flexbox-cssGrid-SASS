@@ -1,0 +1,36 @@
+/* ------------- Mobile First ------------- */
+
+/* En Mobile First se diseña primero para dispositivos pequeños (mobiles) y de ahi se va creciendo en tamaño poco a poco a dispostivos mas grandes ( Como monitores o pantallas de desktop, laptops o Televisores) a tráves de los media queries */
+
+.oferta {
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+}
+
+.precio {
+    font-size: 4rem;
+    margin: 0;
+}
+
+
+/* NOTA: Cuando se trabaja con Mobile first los media queries se colocan del tamaño mas pequeño al mas grande para que funcionen correctamente */
+
+@media (min-width: 600px) {
+    .oferta {
+        background-color: green;
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    .precio {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .oferta {
+        background-color: lightslategray;
+        max-width: 60rem;
+    }
+}

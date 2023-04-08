@@ -1,0 +1,33 @@
+/* ------------- Desktop First ------------- */
+
+/* En Desktop First se diseña primero para dispositivos grandes (monitores o pantallas de desktop, laptops o Televisores) y de ahi se va disminuyendo en tamaño poco a poco a dispostivos mas pequeños (como moviles) a tráves de los media queries */
+
+.oferta {
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+    max-width: 60rem;
+    margin:  0 auto;
+}
+
+.precio {
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* NOTA: Cuando se trabaja con Desktop first los media queries se colocan del tamaño mas grande al mas pequeño para que funcionen correctamente */
+
+@media (max-width: 800px) {
+    .oferta {
+        background-color: lightsalmon;
+        max-width: 40rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .oferta {
+        background-color: green;
+        max-width: 100%;
+    }
+}
+

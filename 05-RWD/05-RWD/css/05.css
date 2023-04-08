@@ -1,0 +1,16 @@
+/* ------------- Shorthand o atajos para Media Queries ------------- */
+
+@media (min-width: 700px) {
+    .oferta {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .oferta {
+        font-size: 4rem;
+    }
+}
+
+
+
