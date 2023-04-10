@@ -1,0 +1,12 @@
+/* ----------- Crear Imágenes Responsive ----------- */
+
+/* snippet para hacer las imagenes responsive que se puede usar en todos los proyectos y no tener problemas */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+
+
