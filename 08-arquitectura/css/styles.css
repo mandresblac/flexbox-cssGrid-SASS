@@ -1,0 +1,235 @@
+/* ---------------- VARIABLES O CUSTOM PROPERTIES ---------------- */
+:root {
+    --blanco: #FFF;
+    --negro: #111111;
+    --gris: #343A40;
+
+    --fuentePrincipal: 'Raleway', sans-serif;
+}
+
+/* ---------------- CONFIGURACIONES GENERALES O GLOBALES ---------------- */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 62.5% convierte 1rem en 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8; /* Interlineado  */
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    margin: 1rem 0 4rem;
+    font-family: var(--fuenteSecundaria);
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 5.8rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block; /* Para que no se agregue una separación en la parte inferior */
+    /* height: auto; */
+}
+
+.contenedor {
+    max-width: 120rem; /* Nunca rebasa el ancho de 120rem que son 1200px */
+    margin: 0 auto; /* Alinea horizontalmente */
+    width: 90%;
+}
+
+.btn {
+    color: var(--gris);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris);
+    padding: .5rem 2rem;
+    transition: background-color .3s;
+}
+
+.btn:hover {
+    color: var(--blanco);
+    background-color: var(--gris);
+    cursor: pointer;
+}
+
+/* ---------------- UTILIDADES ---------------- */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.header {
+    min-height: 60rem;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+}
+
+@media (min-width: 768px) { 
+    .header {
+        padding: 2rem 0;
+    }
+}
+
+.contenido-header {
+    height: calc(60rem - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--blanco);
+}
+
+.nombre-sitio {
+    font-weight: 300;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) { 
+    .nombre-sitio {
+        font-size: 5rem;
+    }
+}
+
+.nombre-sitio span {
+    font-weight: 900;
+}
+
+@media (min-width: 768px) { 
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .contacto {
+        align-items: flex-end;
+    }
+}
+
+.telefono {
+    display: flex;
+}
+
+.telefono::before {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../img/telefono.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 1rem;
+}
+
+.header a {
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) { 
+    .navegacion {
+        flex-direction: row;
+    }
+}
+
+.navegacion a {
+    padding: .5rem;
+    border-radius: 2px;
+    transition: background-color .3s;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) { 
+    .navegacion a {
+        padding: 1rem 2rem;
+    }
+}
+
+.navegacion a:hover {
+    background-color: rgba(255, 255, 255, .5);
+    color: var(--negro);
+    /* cursor: pointer; */
+}
+
+.slogan {
+    text-align: center;
+}
+
+@media (min-width: 768px) { 
+    .slogan {
+        text-align: right;
+    }
+}
+
+.slogan h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) { 
+    .slogan h1 {
+        font-size: 5rem;
+    }
+}
+
+.slogan p {
+    margin: 0;
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
