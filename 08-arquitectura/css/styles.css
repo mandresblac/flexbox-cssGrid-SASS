@@ -338,6 +338,10 @@ img {
 
 /* ---------------- GALERIA DE IMAGENES ---------------- */
 
+.contenedor-galeria h2 {
+    text-align: center;
+}
+
 .galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -346,6 +350,7 @@ img {
 
 @media (min-width: 768px) { 
     .galeria {
+        /* margin: 0 5rem; */
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -353,6 +358,13 @@ img {
 .galeria img {
     object-fit: cover;
     height: 100%;
+}
+
+@media (min-width: 768px) { 
+    .galeria img {
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .galeria .imagen:nth-child(2) {
