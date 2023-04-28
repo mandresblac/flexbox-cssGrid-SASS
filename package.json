@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "gulp-avif": "^1.1.1"
+  }
+}
