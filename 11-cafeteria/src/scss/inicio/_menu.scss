@@ -1,0 +1,11 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nuestro-menu {
+    background-color: v.$primario;
+    padding: 10rem 5rem 12rem;
+
+    @include m.tablet { 
+        padding: 12rem 0 10rem;
+    }
+}
