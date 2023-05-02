@@ -804,3 +804,11 @@ h3 {
   height: 4px;
   background-color: #C39C63;
 }
+
+@media (min-width: 768px) {
+  .contenido-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
