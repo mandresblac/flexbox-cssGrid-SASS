@@ -397,22 +397,6 @@ h3 {
   font-size: 3.2rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.bg-primario {
-  background-color: #5E311E;
-}
-
-.margin-negativo-10 {
-  margin-top: -9rem;
-}
-
-.bg-white {
-  background-color: #FFFFFF;
-}
-
 .header {
   padding: 5rem 0;
   position: relative;
@@ -463,6 +447,10 @@ h3 {
 
 .header-menu {
   background-image: url(../img/header_menu.jpg);
+}
+
+.header-galeria {
+  background-image: url(../img/header_galeria.jpg);
 }
 
 .nav-principal {
@@ -805,10 +793,48 @@ h3 {
   background-color: #C39C63;
 }
 
+.contenido-menu {
+  background-image: url(../img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3/9.2;
+}
+@media (min-width: 480px) {
+  .contenido-menu {
+    aspect-ratio: 3/4;
+  }
+}
 @media (min-width: 768px) {
   .contenido-menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
+    aspect-ratio: 16/6;
+    background-size: 40%;
+    background-position: bottom right;
   }
+}
+.contenido-menu .texto p {
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primario {
+  background-color: #5E311E;
+}
+
+.margin-negativo-10 {
+  margin-top: -9rem;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
