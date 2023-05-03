@@ -535,4 +535,38 @@ h3 {
     width: 100%;
   }
 }
+
+.pasos {
+  margin-top: 5rem;
+}
+.pasos__wave {
+  margin-bottom: -1px;
+}
+.pasos__contenido {
+  background-color: #e8505b;
+}
+.pasos__heading {
+  text-align: center;
+  color: #FFFFFF;
+}
+.pasos__heading--descripcion {
+  font-size: 1.9rem;
+  display: block;
+}
+@media (min-width: 768px) {
+  .pasos__grid {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.pasos__imagen {
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.pasos__imagen:hover {
+  -webkit-transform: rotate(-4deg) scale(1.2);
+          transform: rotate(-4deg) scale(1.2);
+}
 /*# sourceMappingURL=app.css.map */
